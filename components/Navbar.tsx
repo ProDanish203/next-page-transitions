@@ -27,7 +27,7 @@ const AnimatedLink = ({ title, href }: { title: string; href: string }) => {
   const router = useTransitionRouter();
   const pathname = usePathname();
 
-  const isSamePath = pathname.includes(href);
+  const isSamePath = pathname === href;
 
   const slideInOut = () => {
     document.documentElement.animate(
